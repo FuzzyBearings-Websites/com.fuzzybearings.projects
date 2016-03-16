@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+
+	<div class="pages">
+		<h1>Active Projects</h1>
+		<ul class="pages">
+			{% for page in site.pages %}
+			{% if page.active %}
+			<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="posts">
+		<h1>Recent Posts</h1>
+		{% for post in site.posts %}
+		<ul class="posts">
+			<li><span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&nbsp;<span class="post-tags">{{ post.categories | join: ', ' }}</span></li>
+		</ul>
+		{% endfor %}
+	
+	</div>
+
+</div>

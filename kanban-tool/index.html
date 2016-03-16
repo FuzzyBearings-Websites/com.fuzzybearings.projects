@@ -1,0 +1,23 @@
+---
+layout: page
+title: Kanban Tool
+active: true
+---
+
+Kanban Tool is an idea I was inspired to build after getting an iPad Pro. It is essentially a Kanban Board only it takes direct advantage of the iPad's form factor. I hope to port it to the iPhone as well.
+
+<div class="milestones">
+	<h1>Milestone 01</h1>
+	<ul class="milestones">
+		<li><input type="checkbox" /> Basic kanban column layout</li>
+	</ul>
+</div>
+
+<div class="posts">
+	<h1>Kanban Tool Posts</h1>
+	{% for post in site.categories.kanban-tool %}
+	<p>
+		<span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&nbsp;<span class="post-tags">{{ post.categories | join: ', ' }}</span>
+	</p>
+	{% endfor %}
+</div>

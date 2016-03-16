@@ -1,0 +1,38 @@
+.title {
+	font-family: $title-font-family;
+	color: $theme-color;
+}
+
+ul.posts,
+ul.pages,
+ul.milestones {
+	margin-left: 1em;
+	list-style: none;
+}
+
+div.milestones,
+div.posts {
+	border-top: 2px solid $theme-color;
+	margin: 2em 0;
+	padding: 1em 0;
+	.done {
+		color: #aaa;
+		text-decoration: line-through;
+	}
+}
+
+.post-tags {
+	margin-left: .5em;
+}
+
+.topline {
+	background-color: white;
+	padding: 1em 0 .3em 0;
+	text-align: center;
+}
+
+.sub-title {
+	border-bottom: 1px dotted lighten($brand-color, 15%);
+	padding: 1em;
+	text-align: center;
+}
